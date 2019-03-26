@@ -1,0 +1,54 @@
+{
+    "name": "devfaysal/laraqa",
+    "description": "Question and Answer package for laravel site",
+    "keywords": [
+        "devfaysal",
+        "laraqa"
+    ],
+    "homepage": "https://github.com/devfaysal/laraqa",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Faysal Ahamed",
+            "email": "hello@faysal.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devfaysal\\Laraqa\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Devfaysal\\Laraqa\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devfaysal\\Laraqa\\LaraqaServiceProvider"
+            ],
+            "aliases": {
+                "Laraqa": "Devfaysal\\Laraqa\\LaraqaFacade"
+            }
+        }
+    }
+}
