@@ -13,8 +13,11 @@ class CreateLaraqaTables extends Migration
      */
     public function up()
     {
-        Schema::create('laraqa_tables', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('body');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateLaraqaTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('laraqa_tables');
+        Schema::dropIfExists('questions');
     }
 }
